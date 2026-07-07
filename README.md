@@ -122,6 +122,13 @@ Bottom-right: realized book spread distribution.*
 See `notebooks/simulation_demo.ipynb` for the full executed run with inline
 output, or `run_demo.py` for the same comparison as a script.
 
+### 🎥 Simulation replay
+
+[`results/simulation_demo.mp4`](results/simulation_demo.mp4) is an animated,
+tick-by-tick replay of the exact backtest above — the mid price, inventory, and
+cumulative P&L for both strategies building up live, on the same seeded run.
+Regenerate it with `python make_demo_video.py`.
+
 ## How to run
 
 ```bash
@@ -130,6 +137,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 python run_demo.py              # CLI: runs both strategies, prints the table, saves the plot
+python make_demo_video.py       # renders results/simulation_demo.mp4 (requires ffmpeg)
 jupyter notebook notebooks/simulation_demo.ipynb   # same comparison, notebook form
 pytest                          # run the test suite
 ```
